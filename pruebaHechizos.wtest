@@ -1,0 +1,19 @@
+import hechizos.*
+
+describe "tests de HP"{
+    var inmobi = new Hechizo(dificultad = 9)
+    var imperius = new HechizoImperdonable(dificultad = 5,costo=30)
+    var her = new Estudiante(habilidad = 10, hechizos = [inmobi,imperius]) 
+    var lechuza = new Personaje(salud = 100)
+
+    test "Estudiante lanza hechizo comun"{
+        her.lanzar(inmobi,lechuza)
+//        assert.equals(82.8, lechuza.salud())
+        assert.equals(100 - (9*0.8 + 10), lechuza.salud())
+    }
+    test "Estudiante lanza hechizo imperdonable"{
+        her.lanzar(imperius,lechuza)
+        assert.equals(100 - (5*0.8 + 10)*2, lechuza.salud())
+        assert.equals(100 - 30, her.salud())
+    }
+}
