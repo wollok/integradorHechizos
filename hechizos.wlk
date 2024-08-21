@@ -55,7 +55,7 @@ class Profesor inherits Estudiante{
 class Estudiante inherits Personaje{
   const hechizos = [] 
   var property habilidad
-  var casa 
+  var casa
   var property sangrePura = false
 
   method habiloso() = habilidad > 10 

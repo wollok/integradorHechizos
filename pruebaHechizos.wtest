@@ -3,7 +3,7 @@ import hechizos.*
 describe "tests de HP"{
     var inmobi = new Hechizo(dificultad = 9)
     var imperius = new HechizoImperdonable(dificultad = 5,costo=30)
-    var her = new Estudiante(habilidad = 10, hechizos = [inmobi,imperius]) 
+    var her = new Estudiante(habilidad = 10, hechizos = [inmobi,imperius], casa = grifindor) 
     var lechuza = new Personaje(salud = 100)
 
     test "Estudiante lanza hechizo comun"{
